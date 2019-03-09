@@ -1,0 +1,36 @@
+#include <stdio.h>
+#include <string.h>
+#include <cs50.h>
+
+
+//Todo- Task #1
+
+
+const int Max_Child= 5;
+
+typedef struct person
+{
+   char* name;
+   char* birthday;
+   char* spouse;
+   int data;
+   struct person* children [Max_Child];
+   int childCnt;
+}
+person;
+
+int main ( void )
+
+{
+   person person1;
+   person1.name = "Joe";
+   person1.birthday = "2/8/80";
+   person1.spouse = NULL;
+
+for (int i=0; i<Max_Child; i++)
+{
+   person1.children [i] = NULL;
+}
+
+   return 0;
+}
